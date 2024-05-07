@@ -9,8 +9,12 @@ class Persona {
     protected static $pasaporte = 'AB102';
     const RAZA = 'Humano';
 
-    public function getEdad(){
+    public function get_edad(){
         return $this->edad;
+    }
+
+    public function donar_sangre($destinatario){
+        return 'Has donado sangre';
     }
     
 }
@@ -24,12 +28,12 @@ print_r($obj_one); */
 class PersonaAPositivo extends Persona{
     public static $tipo_sangre = 'A+';
 
-    public static function getPasaporte(){
+    public static function get_pasaporte(){
         return parent::$pasaporte;
     }
 }
 
 echo PersonaAPositivo::$tipo_sangre;
-echo PersonaAPositivo::getPasaporte();
+echo PersonaAPositivo::get_pasaporte();
 
 ?>
